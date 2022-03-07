@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+<bean id="cricket" class="spring.core_container.Cricket_Player">
+<constructor-arg ref="CoachCricket"></constructor-arg>
+<constructor-arg value="56" type="int"></constructor-arg>
+<constructor-arg value="10000" type="int"></constructor-arg>
+<constructor-arg value="89" type="int"></constructor-arg>
+<constructor-arg value="Jadeja"></constructor-arg>
+</bean>
+<bean id="football" class="spring.core_container.Football_Player">
+<constructor-arg ref="CoachFootball"></constructor-arg>
+</bean>
+<bean id="CoachCricket" class="spring.core_container.CoachCricket">
+</bean>
+<bean id="CoachFootball" class="spring.core_container.CoachFootball">
+</bean>
+<bean id="CoachTennis" class="spring.core_container.CoachTennis">
+</bean>
+<bean id="tennis" class="spring.core_container.Tennis_Player">
+<property name="rank" value="1" ></property>
+<property name="wins" value="100"></property>
+<property name="name" value="Nadel"></property>
+<property name="smack" value="100"></property>
+<property name="aces" value="982"></property>
+<property name="coach" ref="CoachTennis"></property>
+</bean>
+</beans>
